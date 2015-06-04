@@ -1,6 +1,9 @@
 /*global ArrayBuffer */
 'use strict';
 
+define([], function() {
+var exports = {};
+
 function CType() {
   return;
 }
@@ -26,3 +29,6 @@ function mkCType(f, typename, protoname, hash, size) {
 }
 
 exports.mkCType = mkCType;
+
+return exports;
+});

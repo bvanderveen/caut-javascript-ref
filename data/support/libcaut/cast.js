@@ -2,6 +2,9 @@
 
 'use strict';
 
+define([], function() {
+var exports = {};
+
 /* Section: Byte Casting
  *
  * Tools to cast between integers and sequences of bytes.
@@ -69,3 +72,5 @@ function intToBytes(cBuf, val, sz) {
 }
 exports.intToBytes = intToBytes;
 
+return exports;
+});

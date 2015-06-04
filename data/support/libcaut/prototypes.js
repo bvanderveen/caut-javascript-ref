@@ -1,13 +1,17 @@
 'use strict';
 
-var CBuiltIn     = require('./prototypes/cbuiltin.js');
-var CSynonym     = require('./prototypes/csynonym.js');
-var CArray       = require('./prototypes/carray.js');
-var CVector      = require('./prototypes/cvector.js');
-var CRecord      = require('./prototypes/crecord.js');
-var CCombination = require('./prototypes/ccombination.js');
-var CUnion       = require('./prototypes/cunion.js');
+define([
+	'./prototypes/cbuiltin', 
+	'./prototypes/csynonym', 
+	'./prototypes/carray', 
+	'./prototypes/cvector', 
+	'./prototypes/crecord',
+	'./prototypes/ccombination', 
+	'./prototypes/cunion'], 
+	function(CBuiltIn, CSynonym, CArray, CVector, CRecord, CCombination, CUnion) {
 
+
+var exports = {};
 exports.CBuiltIn = CBuiltIn.CBuiltIn;
 exports.CSynonym = CSynonym.CSynonym;
 exports.CArray = CArray.CArray;
@@ -37,3 +41,11 @@ exports.mkRecord = CRecord.mkRecord;
 exports.mkSynonym = CSynonym.mkSynonym;
 exports.mkUnion = CUnion.mkUnion;
 exports.mkVector = CVector.mkVector;
+
+console.log("exports");
+console.log(exports);
+console.log("CBuiltIn");
+console.log(CBuiltIn);
+
+return exports;
+});

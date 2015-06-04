@@ -1,7 +1,8 @@
 'use strict';
 
-var ctype = require('./ctype.js');
-var cast = require('../cast.js');
+define(['./ctype', '../cast'], function(ctype, cast) {
+
+var exports = {};
 
 function CVector(elements) {
   if (elements.length > CVector.elemMaxLength) {
@@ -65,3 +66,7 @@ function mkVector(f, typename, elemType, elemMaxLength, lengthWidth, hash, size)
   };
 }
 exports.mkVector = mkVector;
+
+return exports; 
+
+});

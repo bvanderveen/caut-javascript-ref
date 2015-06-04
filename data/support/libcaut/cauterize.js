@@ -13,6 +13,10 @@ var dict = require('./typedict.js');
 var buffer = require('./buffer.js');
 var cast = require('./cast.js');
 
+
+define(['./typedict', './buffer', './cast'], function(dict, buffer, cast) {
+var exports = {};
+
 function Cauterize(specDesc) {
   this.typeDict = new dict.TypeDict(specDesc.types);
   this.metaInfo = specDesc.metaInfo;
@@ -49,3 +53,7 @@ Cauterize.prototype.encode = function (typeInstance) {
 };
 
 exports.Cauterize = Cauterize;
+
+return exports; 
+
+});

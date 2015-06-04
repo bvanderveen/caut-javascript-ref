@@ -1,6 +1,7 @@
 'use strict';
 
-var ctype = require('./ctype.js');
+define(['./ctype'], function(ctype) {
+var exports = {};
 
 function CArray(elements) {
   if (elements.length !== this.constructor.elemLength) {
@@ -54,3 +55,6 @@ function mkArray(f, typename, elemType, length, hash, size) {
   };
 }
 exports.mkArray = mkArray;
+
+  return exports;
+});

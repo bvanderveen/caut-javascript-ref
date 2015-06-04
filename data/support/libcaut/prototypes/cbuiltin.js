@@ -4,7 +4,9 @@
          Float32Array, Float64Array */
 'use strict';
 
-var ctype = require('./ctype.js');
+define(['./ctype'], function(ctype) {
+
+var exports = {};
 
 function CBuiltIn(buffer) {
   if (!(buffer instanceof ArrayBuffer)) {
@@ -133,3 +135,7 @@ function mkBool(f, hash, size) {
   return ebi(ctype.mkCType(f, 'bool', 'builtin', hash, size), 1, boolToJs);
 }
 exports.mkBool = mkBool;
+
+console.log("cbuiltin: exports = " + exports);
+return exports;
+});

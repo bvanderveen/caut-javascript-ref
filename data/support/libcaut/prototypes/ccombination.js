@@ -1,8 +1,8 @@
 /*global Uint8Array */
 'use strict';
 
-var ctype = require('./ctype.js');
-var cast = require('../cast.js');
+define(['./ctype', '../cast'], function(ctype, cast) {
+var exports = {};
 
 function calcIxs(ix) {
   return { byteIx: Math.floor(ix / 8), bitIx: ix % 8 };
@@ -105,3 +105,7 @@ function mkCombination(f, typename, fields, flagsWidth, hash, size) {
   };
 }
 exports.mkCombination = mkCombination;
+
+return exports;
+
+});

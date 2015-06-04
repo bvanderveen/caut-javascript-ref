@@ -1,6 +1,7 @@
 'use strict';
 
-var ctype = require('./ctype.js');
+define(['./ctype'], function(ctype) {
+var exports = {};
 
 function CRecord(fields) {
   this.fields = fields;
@@ -65,3 +66,7 @@ function mkRecord(f, typename, fields, hash, size) {
   };
 }
 exports.mkRecord = mkRecord;
+
+return exports;
+
+});

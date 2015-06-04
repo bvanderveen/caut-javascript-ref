@@ -1,7 +1,7 @@
 'use strict';
 
-var ctype = require('./ctype.js');
-var cast = require('../cast.js');
+define(['./ctype', '../cast'], function(ctype, cast) {
+var exports = {};
 
 function CUnion(field) {
   this.field = field;
@@ -72,3 +72,7 @@ function mkUnion(f, typename, fields, tagWidth, hash, size) {
   };
 }
 exports.mkUnion = mkUnion;
+
+return exports;
+
+});

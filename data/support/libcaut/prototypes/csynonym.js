@@ -1,6 +1,7 @@
 'use strict';
 
-var ctype = require('./ctype.js');
+define(['./ctype'], function(ctype) {
+var exports = {};
 
 function CSynonym(value) {
   if (!(value instanceof this.constructor.synType)) {
@@ -40,3 +41,7 @@ function mkSynonym(f, typename, synType, hash, size) {
   return f;
 }
 exports.mkSynonym = mkSynonym;
+
+  return exports
+
+});
