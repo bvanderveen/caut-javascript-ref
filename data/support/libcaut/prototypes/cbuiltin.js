@@ -136,6 +136,5 @@ function mkBool(f, hash, size) {
 }
 exports.mkBool = mkBool;
 
-console.log("cbuiltin: exports = " + exports);
 return exports;
 });

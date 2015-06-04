@@ -42,10 +42,5 @@ exports.mkSynonym = CSynonym.mkSynonym;
 exports.mkUnion = CUnion.mkUnion;
 exports.mkVector = CVector.mkVector;
 
-console.log("exports");
-console.log(exports);
-console.log("CBuiltIn");
-console.log(CBuiltIn);
-
 return exports;
 });

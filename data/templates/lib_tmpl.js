@@ -43,7 +43,5 @@ define(['./libcaut/prototypes'], function(prot) {
 
   exports.SpecificationInfo = specInfo;
 
-  console.log("libtmpl exports = " + exports);
-
   return exports;
 });
