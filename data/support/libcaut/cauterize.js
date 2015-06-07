@@ -9,11 +9,6 @@
  *    - Cauterize
  */
 
-var dict = require('./typedict.js');
-var buffer = require('./buffer.js');
-var cast = require('./cast.js');
-
-
 define(['./typedict', './buffer', './cast'], function(dict, buffer, cast) {
 var exports = {};
 

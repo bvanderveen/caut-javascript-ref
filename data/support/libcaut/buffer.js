@@ -1,6 +1,9 @@
 /*global Uint8Array */
 
+
+define([], function() {
 'use strict';
+var exports = {};
 
 /* Section: Buffering and Byte Iteration
  *
@@ -121,3 +124,6 @@ CautBuffer.prototype.allData = function () {
 };
 
 exports.CautBuffer = CautBuffer;
+
+return exports;
+});
