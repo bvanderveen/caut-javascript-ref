@@ -1,6 +1,7 @@
 'use strict';
 
 define([], function() {
+  var exports = {};
 
   /* Section: Type Dictionary
    *
